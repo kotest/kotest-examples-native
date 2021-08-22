@@ -1,7 +1,7 @@
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 
-class KotestTests : FunSpec() {
+class SsnTest : FunSpec() {
    init {
 
       test("ssn should be invalid when it contains a zero ") {
@@ -15,7 +15,7 @@ class KotestTests : FunSpec() {
       }
 
       test("ssn should be in the accepted format") {
-         validateSocial("123-45-6789") shouldBe true
+         validateSocial("") shouldBe false
          validateSocial("123-45-678") shouldBe false
          validateSocial("12-45-6789") shouldBe false
          validateSocial("1234-56-678") shouldBe false
