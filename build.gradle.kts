@@ -6,7 +6,7 @@ buildscript {
 }
 
 plugins {
-   kotlin("multiplatform").version("1.5.21")
+   kotlin("multiplatform").version("1.5.30")
    id("io.kotest.multiplatform") version "5.0.0.5"
 }
 
@@ -39,14 +39,14 @@ kotlin {
             implementation(kotlin("test-common"))
             implementation(kotlin("test-annotations-common"))
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
-            implementation("io.kotest:kotest-framework-engine:5.0.0.403-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine:5.0.0.419-SNAPSHOT")
          }
       }
 
       val desktopMain by creating {
          dependsOn(commonMain)
          dependencies {
-            implementation("org.jetbrains.kotlin:kotlin-native-utils:1.5.21")
+            implementation("org.jetbrains.kotlin:kotlin-native-utils:1.5.30")
          }
       }
 
