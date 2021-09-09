@@ -38,8 +38,8 @@ kotlin {
          dependencies {
             implementation(kotlin("test-common"))
             implementation(kotlin("test-annotations-common"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
-            implementation("io.kotest:kotest-framework-engine:5.0.0.419-SNAPSHOT")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+            implementation("io.kotest:kotest-framework-engine:5.0.0.475-SNAPSHOT")
          }
       }
 
@@ -62,5 +62,12 @@ kotlin {
          dependsOn(desktopTest)
       }
 
+   }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+   kotlinOptions {
+      apiVersion = "1.5"
+      verbose = true
    }
 }
