@@ -39,7 +39,7 @@ kotlin {
             implementation(kotlin("test-common"))
             implementation(kotlin("test-annotations-common"))
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
-            implementation("io.kotest:kotest-framework-engine:5.0.0.475-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine:5.3.0")
          }
       }
 
