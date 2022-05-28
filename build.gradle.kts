@@ -6,8 +6,8 @@ buildscript {
 }
 
 plugins {
-   kotlin("multiplatform").version("1.5.30")
-   id("io.kotest.multiplatform") version "5.0.0.5"
+   kotlin("multiplatform").version("1.6.21")
+   id("io.kotest.multiplatform") version "5.2.3"
 }
 
 repositories {
@@ -67,7 +67,7 @@ kotlin {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
    kotlinOptions {
-      apiVersion = "1.5"
+      apiVersion = "1.6"
       verbose = true
    }
 }
