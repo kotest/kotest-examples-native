@@ -7,7 +7,7 @@ buildscript {
 
 plugins {
    kotlin("multiplatform").version("1.6.21")
-   id("io.kotest.multiplatform") version "5.2.3"
+   id("io.kotest.multiplatform") version "5.3.0"
 }
 
 repositories {
