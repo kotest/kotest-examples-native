@@ -65,7 +65,7 @@ kotlin {
       val desktopMain by creating {
          dependsOn(commonMain)
          dependencies {
-            implementation("org.jetbrains.kotlin:kotlin-native-utils:1.5.30")
+            implementation("org.jetbrains.kotlin:kotlin-native-utils:1.6.21")
          }
       }
 
