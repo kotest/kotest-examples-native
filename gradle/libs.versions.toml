@@ -1,0 +1,13 @@
+[versions]
+kotest = "5.3.1"
+kotlin = "1.6.21"
+coroutines = "1.6.3"
+
+[libraries]
+kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+[plugins]
+kotest-multiplatform = { id = "io.kotest.multiplatform", version.ref = "kotest" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

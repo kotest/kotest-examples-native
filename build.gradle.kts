@@ -5,9 +5,10 @@ buildscript {
    }
 }
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-   kotlin("multiplatform").version("1.6.21")
-   id("io.kotest.multiplatform") version "5.3.0"
+   alias(libs.plugins.kotlin.multiplatform)
+   alias(libs.plugins.kotest.multiplatform)
 }
 
 repositories {
@@ -47,25 +48,20 @@ kotlin {
 
    sourceSets {
 
-      val commonMain by getting {
-         dependencies {
-            implementation(kotlin("stdlib"))
-         }
-      }
-
+      val commonMain by getting
       val commonTest by getting {
          dependencies {
             implementation(kotlin("test-common"))
             implementation(kotlin("test-annotations-common"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
-            implementation("io.kotest:kotest-framework-engine:5.3.0")
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.kotest.framework.engine)
          }
       }
 
       val desktopMain by creating {
          dependsOn(commonMain)
          dependencies {
-            implementation("org.jetbrains.kotlin:kotlin-native-utils:1.6.21")
+            implementation(kotlin("native-utils"))
          }
       }
 
@@ -81,6 +77,13 @@ kotlin {
          dependsOn(desktopTest)
       }
 
+      val macosArm64Main by getting {
+         dependsOn(desktopMain)
+      }
+
+      val macosArm64Test by getting {
+         dependsOn(desktopTest)
+      }
    }
 }
 
