@@ -1,6 +1,6 @@
 [versions]
 kotest = "5.3.1"
-kotlin = "1.6.21"
+kotlin = "1.7.10"
 coroutines = "1.6.3"
 
 [libraries]
