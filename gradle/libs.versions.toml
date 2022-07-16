@@ -1,7 +1,7 @@
 [versions]
 kotest = "5.3.2"
 kotlin = "1.6.21"
-coroutines = "1.6.3"
+coroutines = "1.6.4"
 
 [libraries]
 kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
