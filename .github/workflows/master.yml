@@ -38,7 +38,7 @@ jobs:
                path: build-reports.zip
 
    macos:
-      runs-on: macos-11
+      runs-on: macos-13
       strategy:
          matrix:
             target:
